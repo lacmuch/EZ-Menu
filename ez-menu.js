@@ -144,6 +144,10 @@ if (!window.jQuery || (window.jQuery && parseInt(window.jQuery.fn.jquery.replace
           });
         }
 
+        if (menu.onclick) {
+            item.on('click',menu.onclick);
+        }
+
         // Add custom classes
         if (menu.classname) {
           link.addClass(menu.classname);
@@ -202,6 +206,10 @@ if (!window.jQuery || (window.jQuery && parseInt(window.jQuery.fn.jquery.replace
             }
           });
         }
+
+        if (menu.onclick) {
+            item.on('click',menu.onclick);
+        }        
 
         // Add custom classes
         if (menu.classname) {
