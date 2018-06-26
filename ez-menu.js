@@ -258,7 +258,7 @@ if (!window.jQuery || (window.jQuery && parseInt(window.jQuery.fn.jquery.replace
 
         // Hide menu sub-menu
         if (elm.prop('visible')) {
-          if (!active || !opened) return;
+          if ((!active || !opened) || $(elm).find('.ui-sortable-helper').length > 0) return;
 
           obj.hide(data.settings.hideSpeed, data.settings.hideEasing, function() {
 
@@ -288,7 +288,7 @@ if (!window.jQuery || (window.jQuery && parseInt(window.jQuery.fn.jquery.replace
       if (action != 'mouseenter touchenter') return;
 
       item.on('mouseleave touchleave', data.settings, function() {
-        if (!active && !opened) return;
+        if ((!active && !opened) || $(item).find('.ui-sortable-helper').length > 0) return;
 
         // Close all submenus
         item.each(function() {
