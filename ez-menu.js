@@ -226,6 +226,7 @@ if (!window.jQuery || (window.jQuery && parseInt(window.jQuery.fn.jquery.replace
         }
 
         item.prepend(link);
+        if (menu.icon) item.prepend('<span class="'+menu.icon+'"/>');
         list.append(item);
       }
 

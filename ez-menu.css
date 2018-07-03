@@ -13,14 +13,14 @@
 ul.ez_menu {
   border: 1px solid #DDDDDD;
   cursor: pointer;
-  height: 34px;
+  height: 32px;
   left: 0px;
   list-style-type: none;
   margin: 0px;
   padding: 0px;
   position: fixed;
   top: 0px;
-  width: auto;
+  width: 5000px;
 }
 
 ul.ez_menu ul.menu_list {
@@ -32,7 +32,7 @@ ul.ez_menu ul.menu_list {
   list-style-type: none;
   padding: 0px;
   position: absolute;
-  top: 34px;
+  top: 29px;
   white-space: nowrap;
   min-width: 150px;
   z-index: 10;
@@ -53,7 +53,7 @@ ul.ez_menu ul.menu_list li:hover {
 ul.ez_menu li {
   float: left;
   font-weight: bold;
-  padding: 8px 20px 6px 12px;
+  padding: 8px 10px 6px 10px;
   position: relative;
 }
 
@@ -67,11 +67,11 @@ ul.ez_menu li a:hover {
 
 ul.ez_menu li.menu_hover_on {
   background-color: #EEEEEE;
-  height: 20px;
+  height: 17px;
 }
 
 ul.ez_menu li.menu_hover_off {
-  height: 20px;
+  height: 15px;
 }
 
 ul.ez_menu li.submenu_hover_on,
