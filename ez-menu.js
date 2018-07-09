@@ -144,8 +144,11 @@ if (!window.jQuery || (window.jQuery && parseInt(window.jQuery.fn.jquery.replace
           });
         }
 
+        link.data('menu', menu);
         if (menu.onclick) {
-            item.on('click',menu.onclick);
+            link.on('click',menu.onclick);
+        } else if ($this.data().settings.onclick) {
+            link.on('click',$this.data().settings.onclick);
         }
 
         // Add custom classes
@@ -207,9 +210,12 @@ if (!window.jQuery || (window.jQuery && parseInt(window.jQuery.fn.jquery.replace
           });
         }
 
+        item.data('menu', menu);
         if (menu.onclick) {
             item.on('click',menu.onclick);
-        }        
+        } else if ($this.data().settings.onclick) {
+            item.on('click',$this.data().settings.onclick);
+        }
 
         // Add custom classes
         if (menu.classname) {
