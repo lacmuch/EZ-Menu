@@ -292,7 +292,7 @@ if (!window.jQuery || (window.jQuery && parseInt(window.jQuery.fn.jquery.replace
         }
       });
 
-      if (action != 'mouseenter touchenter') return;
+      // if (action != 'mouseenter touchenter') return;
 
       item.on('mouseleave touchleave', data.settings, function() {
         if ((!active && !opened) || $(item).find('.ui-sortable-helper').length > 0) return;
@@ -305,7 +305,10 @@ if (!window.jQuery || (window.jQuery && parseInt(window.jQuery.fn.jquery.replace
           if (events) {
             opened = true;
 
-            elm.trigger('mouseenter');
+            if (action != 'mouseenter touchenter')
+              elm.trigger('click');
+            else
+              elm.trigger('mouseenter');
           }
         });
       });
