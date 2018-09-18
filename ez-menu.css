@@ -102,12 +102,12 @@ ul.ez_menu li.submenu_hover_off {
 }
 
 ul.ez_menu * li.submenu {
-  background: #FFFFFF url( images/arrow_rgt.gif ) no-repeat right center !important;
+  background: #FFFFFF url( images/arrow_rgt.gif ) no-repeat right center;
   border-top: 1px dashed #EEEEEE !important;
 }
 
 ul.ez_menu * li.submenu:hover {
-  background: #FFFFFF url( images/arrow_asc.gif ) no-repeat right center !important;
+  background: #FFFFFF url( images/arrow_asc.gif ) no-repeat right center;
 }
 
 ul.ez_menu * li.submenu:first-child {
