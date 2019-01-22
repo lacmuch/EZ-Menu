@@ -158,7 +158,7 @@ if (!window.jQuery || (window.jQuery && parseInt(window.jQuery.fn.jquery.replace
 
         // Create the sub-menu
         if (menu.options) {
-          var submenu = $this.EZMenu('_createMenuOpts', menu.options);
+          var submenu = $this.EZMenu('_createMenuOpts', menu);
 
           item.append(submenu);
 
@@ -179,22 +179,24 @@ if (!window.jQuery || (window.jQuery && parseInt(window.jQuery.fn.jquery.replace
      * @method _createMenuOpts
      * @private
      *
-     * @param {Object} config
+     * @param {Object} parent
      *
      * @returns {Object} jQuery object
      */
-    "_createMenuOpts": function(config) {
+    "_createMenuOpts": function(parent) {
       var $this = $(this);
 
       // Generate as unordered list
       var list = $('<ul></ul>')
         .addClass('menu_list');
 
-      for (var i = 0; i < config.length; i++) {
-        var menu = config[i],
+      for (var i = 0; i < parent.options.length; i++) {
+        var menu = parent.options[i],
             item = $('<li></li>'),
             link = $('<a></a>')
               .append(menu.name);
+
+        menu.parent = parent;
 
         // Bind anchor link event
         if (menu.url) {
@@ -224,7 +226,7 @@ if (!window.jQuery || (window.jQuery && parseInt(window.jQuery.fn.jquery.replace
 
         // Create the sub-menu
         if (menu.options) {
-          var submenu = $this.EZMenu('_createMenuOpts', menu.options);
+          var submenu = $this.EZMenu('_createMenuOpts', menu);
 
           item.addClass('submenu').append(submenu);
 
