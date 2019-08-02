@@ -54,7 +54,7 @@ ul.ez_menu ul.menu_list li:hover {
 ul.ez_menu li {
   float: left;
   font-weight: bold;
-  padding: 8px 20px 6px 2px;
+  padding: 9px 20px 6px 2px;
   position: relative;
 }
 
@@ -72,7 +72,7 @@ ul.ez_menu li.menu_hover_on {
 }
 
 ul.ez_menu li.menu_hover_off {
-  height: 15px;
+  height: 17px;
 }
 
 ul.ez_menu li.submenu_hover_on,
